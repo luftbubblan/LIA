@@ -1,19 +1,39 @@
+$header-end-color: #565c64;
+$header-blue-color: #384251;
+$header-middle-color: #424a53;
+$nav-text-color: #afa17e;
+$button-color: #b0a17c;
+
 body {
     margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    // font-family: 'Belleza', sans-serif;
+    font-weight: 500;
+    font-size: 80px;
+    // letter-spacing: 0;
+    // line-height: 60;
+    font-family: 'optiocean-italicregular';
 }
 
 header {
-    background-image: linear-gradient(90deg, #565c64, #384251 3% 40%, #424a53, #384251 60% 97%, #565c64);
+    background-image: linear-gradient(90deg, $header-end-color, $header-blue-color 3% 40%, $header-middle-color, $header-blue-color 60% 97%, $header-end-color);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     height: 10vh;
     padding: 0 4vw;
+    align-items: center;
+    img {
+        height: 80%;
+    }
     nav {
         display: flex;
         align-items: center;
         a {
-            color: #afa17e;
+            color: $nav-text-color;
             text-decoration: none;
             margin: 0 2vw;
         }
@@ -27,7 +47,7 @@ header {
             color: #ffffff;
         }
         button {
-            background-color: #b0a17c;
+            background-color: $button-color;
             color: #000000;
             height: 42%;
             border-radius: 5000px;
@@ -47,7 +67,7 @@ main {
     text-align: center;
     align-items: center;
     justify-content: center;
-    h1 {
-        width: 51%;
+    div {
+        width: 50%;
     }
 }
