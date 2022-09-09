@@ -8,29 +8,43 @@
     <title>Heno-startsida</title>
 </head>
 <body>
-    <header>
-        <img src="img/test-logga.svg" alt="Logga">
-        <nav>
-            <a href="">Produkter</a>
-            <a href="">Om oss</a>
-            <a href="">Beställning</a>
-        </nav>
-        <div class="loginDiv">
-            <p>Du är inloggad som Bamse</p>
-            <button>Logga in</button>
+    <div id="blurDiv">
+        <header>
+            <a href=""><img src="img/test-logga.svg" alt="Logga"></a>
+            <nav>
+                <a href="#">Produkter</a>
+                <a href="#">Om oss</a>
+                <a href="#">Beställning</a>
+            </nav>
+            <div id="loginDiv">
+                <p>Du är inloggad som Bamse</p>
+                <button onclick="logInBtnPress()">Logga in</button>
+            </div>
+        </header>
+        
+        <main>
+            <div id="textbox">
+                <p>Ett nytt sätt att upptäcka</p>
+                <h1>Silkeslena produkter med glansiga detaljer</h1>
+            </div>
+        </main>
+    </div>
+    <div class="hidden" id="logInPopup">
+        <div id="logInContent">
+            <p id="logInHeader">Logga in</p>
+            <p id="logInText">Använd ditt namn för att logga in</p>
+            <form>
+                <input type="text" placeholder="Namn">
+                <input type="submit" value="Logga in">
+            </form>
+            <p id="villkor"> Genom att logga in godkänner du <a href="#">våra villkor</a></p>
         </div>
-    </header>
-
-    <main>
-        <div class="textbox">
-            <p>Ett nytt sätt att upptäcka</p>
-            <h1>Silkeslena produkter med glansiga detaljer</h1>
-        </div>
-    </main>
+    </div>
 </body>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 </style>
+<script src="index.js"></script>
 </html>
