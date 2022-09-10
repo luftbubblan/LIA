@@ -12,9 +12,9 @@
         <header>
             <a href=""><img src="img/test-logga.svg" alt="Logga"></a>
             <nav>
-                <a href="#">Produkter</a>
-                <a href="#">Om oss</a>
-                <a href="#">Beställning</a>
+                <span class="navLink">Produkter</span>
+                <span class="navLink">Om oss</span>
+                <span class="navLink">Beställning</span>
             </nav>
             <div id="loginDiv">
                 <p>Du är inloggad som Bamse</p>
@@ -29,15 +29,17 @@
             </div>
         </main>
     </div>
-    <div class="hidden" id="logInPopup">
-        <div id="logInContent">
-            <p id="logInHeader">Logga in</p>
-            <p id="logInText">Använd ditt namn för att logga in</p>
-            <form>
-                <input type="text" placeholder="Namn">
-                <input type="submit" value="Logga in">
-            </form>
-            <p id="villkor"> Genom att logga in godkänner du <a href="#">våra villkor</a></p>
+    <div class="hidden" id="backgroundBlocker">
+        <div id="logInPopup">
+            <div id="logInContent">
+                <p id="logInHeader">Logga in</p>
+                <p id="logInText">Använd ditt namn för att logga in</p>
+                <form>
+                    <input type="text" placeholder="Namn">
+                    <input type="submit" value="Logga in">
+                </form>
+                <p id="villkor"> Genom att logga in godkänner du <span id="villkorLink">våra villkor</span></p>
+            </div>
         </div>
     </div>
 </body>
