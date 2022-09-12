@@ -28,19 +28,19 @@ header nav .navLink {
   text-transform: uppercase;
   cursor: pointer;
 }
-header #loginDiv {
+header #logInDiv {
   margin-left: auto;
   display: flex;
   align-items: center;
 }
-header #loginDiv p {
+header #logInDiv #logInDivMessage {
   color: #ffffff;
   margin-right: 2vw;
   font-size: 10px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
-header #loginDiv button {
+header #logInDiv button {
   background-color: #b0a17c;
   font-family: "Lato", sans-serif;
   font-size: 15px;
@@ -98,6 +98,18 @@ main #textbox h1 {
   right: 0;
   margin: 0 auto;
   border-radius: 8px;
+}
+#logInPopup #closeBtn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: relative;
+  float: right;
+  right: 17px;
+  top: 17px;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
 }
 #logInPopup #logInContent {
   width: 230px;

@@ -1,9 +1,1 @@
-Funktionalitet
-• Klickar man logga in så ska en popup dyka upp enligt skiss
-• Klickar man på krysset så stängs popupen
-• Fyller man i sitt namn och loggar in så ska ”Du är inloggad som *namn*” dyka upp
-och knappen ska ändras till ”Logga ut” enligt skiss
-• Om man uppdaterar sidan så loggas man ut automatiskt, men om man loggar in
-med samma namn som tidigare så uppdateras texten till ”Välkommen tillbaka! Du
-är inloggad som *namn*
-• Se till att den blir anpassad för olika enheter, ner till mobil
+Se till att den blir anpassad för olika enheter, ner till mobil

@@ -16,9 +16,10 @@
                 <span class="navLink">Om oss</span>
                 <span class="navLink">Beställning</span>
             </nav>
-            <div id="loginDiv">
-                <p>Du är inloggad som Bamse</p>
-                <button onclick="logInBtnPress()">Logga in</button>
+            <div id="logInDiv">
+                <p id="logInDivMessage"></p>
+                <button id="logInBtn" onclick="togglePopup()">Logga in</button>
+                <button class="hidden" id="logOutBtn" onclick="logOut()">Logga ut</button>
             </div>
         </header>
         
@@ -31,11 +32,13 @@
     </div>
     <div class="hidden" id="backgroundBlocker">
         <div id="logInPopup">
+            <button id="closeBtn" onclick="togglePopup()"><img src="img/close-symbol.svg" alt="Close"></button>
+        
             <div id="logInContent">
                 <p id="logInHeader">Logga in</p>
                 <p id="logInText">Använd ditt namn för att logga in</p>
-                <form>
-                    <input type="text" placeholder="Namn">
+                <form onsubmit="event.preventDefault(); logIn(this);">
+                    <input id="NameInput" type="text" maxlength="20" placeholder="Namn" onkeypress="return event.charCode != 32">
                     <input type="submit" value="Logga in">
                 </form>
                 <p id="villkor"> Genom att logga in godkänner du <span id="villkorLink">våra villkor</span></p>
