@@ -38,7 +38,7 @@
                 <p id="logInHeader">Logga in</p>
                 <p id="logInText">Använd ditt namn för att logga in</p>
                 <form onsubmit="event.preventDefault(); logIn(this);">
-                    <input id="NameInput" type="text" maxlength="20" placeholder="Namn" onkeypress="return event.charCode != 32">
+                    <input id="NameInput" type="text" maxlength="20" placeholder="Namn" onkeypress="return event.charCode != 32" required>
                     <input type="submit" value="Logga in">
                 </form>
                 <p id="villkor"> Genom att logga in godkänner du <span id="villkorLink">våra villkor</span></p>
