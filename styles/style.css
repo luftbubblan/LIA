@@ -8,12 +8,16 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 10vh;
+  height: 67px;
   padding: 0 7vw;
   align-items: center;
 }
-header img {
-  height: 71%;
+header a {
+  height: 3.5vw;
+}
+header a img {
+  height: 100%;
+  width: 100%;
 }
 header nav {
   display: flex;
@@ -22,7 +26,7 @@ header nav {
 header nav .navLink {
   color: #afa17e;
   margin: 0 2vw;
-  font-size: 15px;
+  font-size: 1.1vw;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -36,18 +40,18 @@ header #logInDiv {
 header #logInDiv #logInDivMessage {
   color: #ffffff;
   margin-right: 2vw;
-  font-size: 10px;
+  font-size: 0.7vw;
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 header #logInDiv button {
   background-color: #b0a17c;
   font-family: "Lato", sans-serif;
-  font-size: 15px;
+  font-size: 1.1vw;
   font-weight: 600;
   letter-spacing: 0.9px;
-  height: 28px;
-  width: 134px;
+  height: 2vw;
+  width: 9.8vw;
   border: none;
   border-radius: 25px;
   text-transform: uppercase;
@@ -57,7 +61,7 @@ header #logInDiv button {
 main {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: calc(100vh - 67px);
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,24 +74,24 @@ main {
 }
 main #textbox {
   width: 50%;
-  margin-top: 190px;
+  margin-top: 13%;
 }
 main #textbox p {
-  font-size: 14px;
+  font-size: 1vw;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 main #textbox h1 {
   font-family: "optiocean-italicregular";
   font-weight: 500;
-  font-size: 55px;
+  font-size: 4vw;
   letter-spacing: 1.4px;
   margin: 0;
 }
 
 #logInPopup {
-  height: 250px;
-  width: 341px;
+  height: 18.3vw;
+  width: 25vw;
   background-color: #e4e4ee;
   color: black;
   text-align: center;
@@ -105,53 +109,57 @@ main #textbox h1 {
   padding: 0;
   position: relative;
   float: right;
-  right: 17px;
-  top: 17px;
-  height: 16px;
-  width: 16px;
+  right: 1.2vw;
+  top: 1.2vw;
+  height: 1.2vw;
+  width: 1.2vw;
   cursor: pointer;
 }
+#logInPopup #closeBtn img {
+  height: 1.2vw;
+  width: 1.2vw;
+}
 #logInPopup #logInContent {
-  width: 230px;
-  margin: 35px auto;
+  width: 67%;
+  margin: 2.6vw auto;
   text-align: left;
 }
 #logInPopup #logInContent p {
   margin: 0;
 }
 #logInPopup #logInContent #logInHeader {
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: 600;
 }
 #logInPopup #logInContent #logInText {
-  font-size: 15px;
+  font-size: 1.1vw;
   font-weight: 500;
-  margin-top: 6px;
-  margin-bottom: 21px;
+  margin-top: 0.4vw;
+  margin-bottom: 1.5vw;
 }
 #logInPopup #logInContent form input {
-  height: 37px;
+  height: 2.7vw;
   border: none;
   padding: 0;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 1.1vw;
   font-weight: 500;
 }
 #logInPopup #logInContent form input[type=text] {
-  width: calc(100% - 14px);
-  padding-left: 14px;
+  width: calc(100% - 1vw);
+  padding-left: 1vw;
   color: #727272;
-  margin-bottom: 11px;
+  margin-bottom: 0.8vw;
 }
 #logInPopup #logInContent form input[type=submit] {
   width: 100%;
   background-color: #afa17e;
   color: white;
-  margin-bottom: 24px;
+  margin-bottom: 1.8vw;
   cursor: pointer;
 }
 #logInPopup #logInContent #villkor {
-  font-size: 9px;
+  font-size: 0.7vw;
   font-weight: 500;
   text-align: center;
 }
@@ -175,4 +183,94 @@ main #textbox h1 {
 
 .blur-filter {
   filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='6' result='b'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a") brightness(65%) contrast(140%);
+}
+
+@media (min-width: 1800px) {
+  header {
+    height: 80px;
+  }
+  header a {
+    height: 70px;
+  }
+  main {
+    height: calc(100vh - 80px);
+  }
+}
+@media (max-width: 800px) {
+  header {
+    height: 25vw;
+  }
+  header a {
+    height: 12vw;
+  }
+  header nav .navLink {
+    font-size: 3vw;
+  }
+  header #logInDiv #logInDivMessage {
+    font-size: 2vw;
+  }
+  header #logInDiv button {
+    font-size: 3vw;
+    height: 6vw;
+    width: 30vw;
+  }
+  main {
+    height: calc(100vh - 25vw);
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+  main #textbox {
+    width: 90%;
+    margin-top: 40%;
+  }
+  main #textbox p {
+    font-size: 3vw;
+  }
+  main #textbox h1 {
+    font-size: 12vw;
+  }
+  #logInPopup {
+    height: 66vw;
+    width: 90vw;
+    top: 20vh;
+  }
+  #logInPopup #closeBtn {
+    right: 5vw;
+    top: 5vw;
+    height: 7vw;
+    width: 7vw;
+  }
+  #logInPopup #closeBtn img {
+    height: 7vw;
+    width: 7vw;
+  }
+  #logInPopup #logInContent {
+    width: 80%;
+    margin: 10vw auto;
+  }
+  #logInPopup #logInContent #logInHeader {
+    font-size: 10vw;
+  }
+  #logInPopup #logInContent #logInText {
+    font-size: 5vw;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+  }
+  #logInPopup #logInContent form input {
+    height: 10vw;
+    font-size: 5vw;
+  }
+  #logInPopup #logInContent form input[type=text] {
+    width: calc(100% - 4vw);
+    padding-left: 4vw;
+    margin-bottom: 5vw;
+  }
+  #logInPopup #logInContent form input[type=submit] {
+    margin-bottom: 1.8vw;
+  }
+  #logInPopup #logInContent #villkor {
+    font-size: 3vw;
+  }
 }/*# sourceMappingURL=style.css.map */
