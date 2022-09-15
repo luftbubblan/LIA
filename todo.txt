@@ -1,4 +1,0 @@
-Se till att den blir anpassad för olika enheter, ner till mobil
-Ändra header. Hamburger meny eller byta plats på loggin och nav
-
-Hover effecter

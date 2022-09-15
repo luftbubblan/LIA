@@ -76,6 +76,10 @@ header #logInDiv button:hover {
   transition: 0.4s;
   background-color: #dac798;
 }
+header #logInDiv button:not(:hover) {
+  transition: 0.4s;
+  background-color: #b0a17c;
+}
 
 main {
   display: flex;
@@ -138,6 +142,14 @@ main #textbox h1 {
   height: 1.2vw;
   width: 1.2vw;
 }
+#logInPopup #closeBtn:hover {
+  transition: 0.4s;
+  transform: scale(1.6);
+}
+#logInPopup #closeBtn:not(:hover) {
+  transition: 0.4s;
+  transform: scale(1);
+}
 #logInPopup #logInContent {
   width: 67%;
   margin: 2.6vw auto;
@@ -181,6 +193,11 @@ main #textbox h1 {
   transition: 0.4s;
   background-color: #dac798;
   color: black;
+}
+#logInPopup #logInContent form input[type=submit]:not(:hover) {
+  transition: 0.4s;
+  background-color: #b0a17c;
+  color: white;
 }
 #logInPopup #logInContent #villkor {
   font-size: 0.7vw;

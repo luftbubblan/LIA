@@ -81,6 +81,10 @@ header {
                 transition: 0.4s;
                 background-color: $button-hover-color;
             }
+            &:not(:hover) {
+                transition: 0.4s;
+                background-color: $button-color;
+            }
         }
     }
 }
@@ -143,6 +147,15 @@ main {
             height: 1.2vw;
             width: 1.2vw;
         }
+        &:hover {
+            transition: 0.4s;
+            transform: scale(1.6);
+
+        }
+        &:not(:hover) {
+            transition: 0.4s;
+            transform: scale(1);
+        }
     }
     #logInContent {
         width: 67%;
@@ -186,6 +199,11 @@ main {
                     transition: 0.4s;
                     background-color: $button-hover-color;
                     color: black;
+                }
+                &:not(:hover) {
+                    transition: 0.4s;
+                    background-color: $button-color;
+                    color: white;
                 }
             }
         }
