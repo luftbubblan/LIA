@@ -17,20 +17,32 @@ function logIn(e) {
         localStorage.setItem("names", names);
     }
     togglePopup();
-    document.getElementById("logOutBtn").classList.toggle("hidden");
-    document.getElementById("logInBtn").classList.toggle("hidden");
+    const logInBtn = document.getElementsByClassName("logInBtn");
+    for (var i = 0; i < logInBtn.length; i++) {
+        logInBtn[i].classList.toggle("hidden")
+    }
+    const logOutBtn = document.getElementsByClassName("logOutBtn");
+    for (var i = 0; i < logOutBtn.length; i++) {
+        logOutBtn[i].classList.toggle("hidden")
+    }
     
 }
 
 function logOut() {
     document.getElementById("logInDivMessage").innerHTML = "";
-    document.getElementById("logInBtn").classList.toggle("hidden");
-    document.getElementById("logOutBtn").classList.toggle("hidden");
+    const logInBtn = document.getElementsByClassName("logInBtn");
+    for (var i = 0; i < logInBtn.length; i++) {
+        logInBtn[i].classList.toggle("hidden")
+    }
+    const logOutBtn = document.getElementsByClassName("logOutBtn");
+    for (var i = 0; i < logOutBtn.length; i++) {
+        logOutBtn[i].classList.toggle("hidden")
+    }
 }
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// ---UNCOMMENT TO RESET LOCAL STORAGE---
+// ---UNCOMMENT TO RESET LOCAL STORAGE FOR SAVED NAMES---
 // localStorage.setItem("names", "");

@@ -6,6 +6,7 @@ $header-blue-color: #384251;
 $header-middle-color: #424a53;
 $nav-text-color: #afa17e;
 $button-color: #b0a17c;
+$button-hover-color: #dac798;
 
 body {
     margin: 0;
@@ -76,6 +77,10 @@ header {
             border-radius: 25px;
             text-transform: uppercase;
             cursor: pointer;
+            &:hover {
+                transition: 0.4s;
+                background-color: $button-hover-color;
+            }
         }
     }
 }
@@ -177,6 +182,11 @@ main {
                 color: white;
                 margin-bottom: 1.8vw;
                 cursor: pointer;
+                &:hover {
+                    transition: 0.4s;
+                    background-color: $button-hover-color;
+                    color: black;
+                }
             }
         }
         #villkor {

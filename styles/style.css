@@ -72,6 +72,10 @@ header #logInDiv button {
   text-transform: uppercase;
   cursor: pointer;
 }
+header #logInDiv button:hover {
+  transition: 0.4s;
+  background-color: #dac798;
+}
 
 main {
   display: flex;
@@ -172,6 +176,11 @@ main #textbox h1 {
   color: white;
   margin-bottom: 1.8vw;
   cursor: pointer;
+}
+#logInPopup #logInContent form input[type=submit]:hover {
+  transition: 0.4s;
+  background-color: #dac798;
+  color: black;
 }
 #logInPopup #logInContent #villkor {
   font-size: 0.7vw;
