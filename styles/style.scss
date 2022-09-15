@@ -21,13 +21,15 @@ header {
     height: 67px;
     padding: 0 7vw;
     align-items: center;
-    a{
+
+    a {
         height: 3.5vw;
         img {
             height: 100%;
             width: 100%;
         }
     }
+
     nav {
         display: flex;
         align-items: center;
@@ -44,6 +46,7 @@ header {
                 cursor: pointer;
             }
         }
+
         #checkbox {
             display: none;
         }
@@ -54,10 +57,12 @@ header {
             display: none;
         }
     }
+
     #logInDiv {
         margin-left: auto;
         display: flex;
         align-items: center;
+
         #logInDivMessage {
             color: #ffffff;
             margin-right: 2vw;
@@ -65,6 +70,7 @@ header {
             letter-spacing: 0.6px;
             text-transform: uppercase;
         }
+
         button {
             background-color: $button-color;
             font-family: 'Lato', sans-serif;
@@ -101,10 +107,11 @@ main {
     text-align: center;
     align-items: center;
     backdrop-filter: blur(10px);
+
     #textbox {
         width: 50%;
         margin-top: 13%;
-        p{
+        p {
             font-size: 1vw;
             letter-spacing: 1.4px;
             text-transform: uppercase;
@@ -132,6 +139,7 @@ main {
     right: 0;
     margin: 0 auto;
     border-radius: 8px;
+
     #closeBtn {
         border: none;
         background-color: transparent;
@@ -157,6 +165,7 @@ main {
             transform: scale(1);
         }
     }
+
     #logInContent {
         width: 67%;
         margin: 2.6vw auto;
@@ -174,6 +183,7 @@ main {
             margin-top: 0.4vw;
             margin-bottom: 1.5vw;
         }
+
         form {
             input {
                 height: 2.7vw;
@@ -183,12 +193,14 @@ main {
                 font-size: 1.1vw;
                 font-weight: 500;
             }
+
             input[type=text] {
                 width: calc(100% - 1vw);
                 padding-left: 1vw;
                 color: #727272;
                 margin-bottom: 0.8vw;
             }
+
             input[type=submit] {
                 width: 100%;
                 background-color: #afa17e;
@@ -226,7 +238,7 @@ main {
     left: 0;
     right: 0;
     z-index: 1;
-  }
+}
 
 .hidden {
     display: none;
@@ -236,13 +248,14 @@ main {
     filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='6' result='b'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a") brightness(65%) contrast(140%);
 }
 
-@media  (min-width: 1800px) {
+@media (min-width: 1800px) {
     header {
         height: 80px;
         a{
             height: 70px;
         }
     }
+
     main {
         height: calc(100vh - 80px);
     }
@@ -257,11 +270,13 @@ main {
             margin-top: 1.5vw;
             height: 12vw;
         }
+
         nav {
             overflow: hidden;
             #desktopMenu {
                 display: none;
             }
+
             #checkbox {
                 position: absolute;
                 display: block;
@@ -273,6 +288,7 @@ main {
                 opacity: 0;
                 cursor: pointer;
             }
+
             #hamburgerLines {
                 display: block;
                 height: 6.1vw;
@@ -300,6 +316,7 @@ main {
                     transition: transform 0.4s ease-in-out;
                 }
             }
+
             #menuItems {
                 background-image: linear-gradient(90deg, $header-end-color, $header-blue-color 5% 30%, $header-middle-color, $header-blue-color 90% 95%, $header-end-color);
                 color: $nav-text-color;
@@ -319,18 +336,19 @@ main {
                     font-size: 5vw;
                 }
             }
-            input[type=checkbox]:checked ~ #hamburgerLines .line1 {
+            #checkbox:checked ~ #hamburgerLines .line1 {
                 transform: rotate(45deg);
             } 
-            input[type=checkbox]:checked ~ #hamburgerLines .line2 {
+            #checkbox:checked ~ #hamburgerLines .line2 {
                 transform: scaleY(0);
             } 
-            input[type=checkbox]:checked ~ #hamburgerLines .line3 {
+            #checkbox:checked ~ #hamburgerLines .line3 {
                 transform: rotate(-45deg);
             }
-            input[type=checkbox]:checked ~ #menuItems {
+            #checkbox:checked ~ #menuItems {
                 transform: translate(0);
             }
+
             #logInDiv {
                 position: absolute;
                 right: 2vw;
@@ -349,10 +367,11 @@ main {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
+
         #textbox {
             width: 90%;
             margin-top: 40%;
-            p{
+            p {
                 font-size: 3vw;
             }
             h1 {
@@ -365,6 +384,7 @@ main {
         height: 66vw;
         width: 90vw;
         top: 20vh;
+
         #closeBtn {
             right: 5vw;
             top: 5vw;
@@ -375,9 +395,11 @@ main {
                 width: 7vw;
             }
         }
+
         #logInContent {
             width: 80%;
             margin: 10vw auto;
+
             #logInHeader {
                 font-size: 10vw;
             }
@@ -386,6 +408,7 @@ main {
                 margin-top: 1vw;
                 margin-bottom: 2vw;
             }
+
             form {
                 input {
                     height: 10vw;
@@ -400,6 +423,7 @@ main {
                     margin-bottom: 1.8vw;
                 }
             }
+            
             #villkor {
                 font-size: 3vw;
             }

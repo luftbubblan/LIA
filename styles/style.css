@@ -310,16 +310,16 @@ main #textbox h1 {
     margin-bottom: 2vw;
     font-size: 5vw;
   }
-  header nav input[type=checkbox]:checked ~ #hamburgerLines .line1 {
+  header nav #checkbox:checked ~ #hamburgerLines .line1 {
     transform: rotate(45deg);
   }
-  header nav input[type=checkbox]:checked ~ #hamburgerLines .line2 {
+  header nav #checkbox:checked ~ #hamburgerLines .line2 {
     transform: scaleY(0);
   }
-  header nav input[type=checkbox]:checked ~ #hamburgerLines .line3 {
+  header nav #checkbox:checked ~ #hamburgerLines .line3 {
     transform: rotate(-45deg);
   }
-  header nav input[type=checkbox]:checked ~ #menuItems {
+  header nav #checkbox:checked ~ #menuItems {
     transform: translate(0);
   }
   header nav #logInDiv {

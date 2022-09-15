@@ -16,7 +16,9 @@ function logIn(e) {
         names += name + ",";
         localStorage.setItem("names", names);
     }
+
     togglePopup();
+
     const logInBtn = document.getElementsByClassName("logInBtn");
     for (var i = 0; i < logInBtn.length; i++) {
         logInBtn[i].classList.toggle("hidden")
@@ -25,11 +27,11 @@ function logIn(e) {
     for (var i = 0; i < logOutBtn.length; i++) {
         logOutBtn[i].classList.toggle("hidden")
     }
-    
 }
 
 function logOut() {
     document.getElementById("logInDivMessage").innerHTML = "";
+    
     const logInBtn = document.getElementsByClassName("logInBtn");
     for (var i = 0; i < logInBtn.length; i++) {
         logInBtn[i].classList.toggle("hidden")
