@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+
 $header-end-color: #565c64;
 $header-blue-color: #384251;
 $header-middle-color: #424a53;
@@ -27,14 +30,27 @@ header {
     nav {
         display: flex;
         align-items: center;
-        .navLink {
-            color: $nav-text-color;
-            margin: 0 2vw;
-            font-size: 1.1vw;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            cursor: pointer;
+        #desktopMenu {
+            list-style-type: none;
+            li {
+                float: left;
+                color: $nav-text-color;
+                margin: 0 2vw;
+                font-size: 1.1vw;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+        #checkbox {
+            display: none;
+        }
+        #hamburgerLines {
+            display: none;
+        }
+        #menuItems {
+            display: none;
         }
     }
     #logInDiv {
@@ -208,29 +224,101 @@ $breakpoint-bigScreen: 1800px;
 $breakpoint-handheld: 800px;
 @media (max-width: $breakpoint-handheld) {
     header {
-        height: 25vw;
-        a{
+        height: 15vw;
+        padding: 0;
+        justify-content: center;
+        a {
+            margin-top: 1.5vw;
             height: 12vw;
         }
         nav {
-            .navLink {
-                font-size: 3vw;
+            overflow: hidden;
+            #desktopMenu {
+                display: none;
             }
-        }
-        #logInDiv {
-            #logInDivMessage {
-                font-size: 2vw;
+            #checkbox {
+                position: absolute;
+                display: block;
+                height: 7vw;
+                width: 8vw;
+                top: 3.8vw;
+                right: 4vw;
+                z-index: 1;
+                opacity: 0;
+                cursor: pointer;
             }
-            button {
-                font-size: 3vw;
-                height: 6vw;
-                width: 30vw;
+            #hamburgerLines {
+                display: block;
+                height: 6.1vw;
+                width: 7.5vw;
+                position: absolute;
+                top: 4.7vw;
+                right: 4.7vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .line {
+                    height: 0.9vw;
+                    border-radius: 10px;
+                    background: #0e2431;
+                }
+                .line1 {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+                .line2 {
+                    transition: transform 0.2s ease-in-out;
+                }
+                .line3 {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+            #menuItems {
+                background-image: linear-gradient(90deg, $header-end-color, $header-blue-color 5% 30%, $header-middle-color, $header-blue-color 90% 95%, $header-end-color);
+                color: $nav-text-color;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                transform: translate(100vw);
+                transition: transform 0.5s ease-in-out;
+                z-index: 1;
+                padding: 0;
+                padding-top: 2vw;
+                margin-top: 1.5vw;
+                text-align: center;
+                list-style-type: none;
+                li {
+                    margin-bottom: 2vw;
+                    font-size: 5vw;
+                }
+            }
+            input[type=checkbox]:checked ~ #hamburgerLines .line1 {
+                transform: rotate(45deg);
+            } 
+            input[type=checkbox]:checked ~ #hamburgerLines .line2 {
+                transform: scaleY(0);
+            } 
+            input[type=checkbox]:checked ~ #hamburgerLines .line3 {
+                transform: rotate(-45deg);
+            }
+            input[type=checkbox]:checked ~ #menuItems {
+                transform: translate(0);
+            }
+            #logInDiv {
+                position: absolute;
+                right: 2vw;
+                button {
+                    font-size: calc(1.1vw * 3);
+                    height: calc(2vw * 3);
+                    width: calc(9.8vw * 3);
+                }
             }
         }
     }
 
     main {
-        height: calc(100vh - 25vw);
+        height: calc(100vh - 15vw);
         background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/bg-image.jpg");
         background-repeat: no-repeat;
         background-size: cover;

@@ -12,10 +12,29 @@
         <header>
             <a href=""><img src="img/test-logga.svg" alt="Logga"></a>
             <nav>
-                <span class="navLink">Produkter</span>
-                <span class="navLink">Om oss</span>
-                <span class="navLink">Beställning</span>
+                <ul id="desktopMenu">
+                    <li>Produkter</li>
+                    <li>Om oss</li>
+                    <li>Beställning</li>
+                </ul>
+
+                <input id="checkbox" type="checkbox"/>
+                <div id="hamburgerLines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul id="menuItems">
+                    <div id="logInDiv">
+                        <button id="logInBtn" onclick="togglePopup()">Logga in</button>
+                        <button class="hidden" id="logOutBtn" onclick="logOut()">Logga ut</button>
+                    </div>
+                    <li>Produkter</li>
+                    <li>Om oss</li>
+                    <li>Beställning</li>
+                </ul>
             </nav>
+
             <div id="logInDiv">
                 <p id="logInDivMessage"></p>
                 <button id="logInBtn" onclick="togglePopup()">Logga in</button>
@@ -30,6 +49,7 @@
             </div>
         </main>
     </div>
+
     <div class="hidden" id="backgroundBlocker">
         <div id="logInPopup">
             <button id="closeBtn" onclick="togglePopup()"><img src="img/close-symbol.svg" alt="Close"></button>
@@ -37,19 +57,17 @@
             <div id="logInContent">
                 <p id="logInHeader">Logga in</p>
                 <p id="logInText">Använd ditt namn för att logga in</p>
+
                 <form onsubmit="event.preventDefault(); logIn(this);">
                     <input id="NameInput" type="text" maxlength="20" placeholder="Namn" onkeypress="return event.charCode != 32" required>
                     <input type="submit" value="Logga in">
                 </form>
+
                 <p id="villkor"> Genom att logga in godkänner du <span id="villkorLink">våra villkor</span></p>
             </div>
         </div>
     </div>
 </body>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
-</style>
 <script src="index.js"></script>
 </html>

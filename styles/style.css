@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belleza&display=swap");
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -23,7 +25,11 @@ header nav {
   display: flex;
   align-items: center;
 }
-header nav .navLink {
+header nav #desktopMenu {
+  list-style-type: none;
+}
+header nav #desktopMenu li {
+  float: left;
   color: #afa17e;
   margin: 0 2vw;
   font-size: 1.1vw;
@@ -31,6 +37,15 @@ header nav .navLink {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
+}
+header nav #checkbox {
+  display: none;
+}
+header nav #hamburgerLines {
+  display: none;
+}
+header nav #menuItems {
+  display: none;
 }
 header #logInDiv {
   margin-left: auto;
@@ -198,24 +213,100 @@ main #textbox h1 {
 }
 @media (max-width: 800px) {
   header {
-    height: 25vw;
+    height: 15vw;
+    padding: 0;
+    justify-content: center;
   }
   header a {
+    margin-top: 1.5vw;
     height: 12vw;
   }
-  header nav .navLink {
-    font-size: 3vw;
+  header nav {
+    overflow: hidden;
   }
-  header #logInDiv #logInDivMessage {
-    font-size: 2vw;
+  header nav #desktopMenu {
+    display: none;
   }
-  header #logInDiv button {
-    font-size: 3vw;
+  header nav #checkbox {
+    position: absolute;
+    display: block;
+    height: 7vw;
+    width: 8vw;
+    top: 3.8vw;
+    right: 4vw;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+  }
+  header nav #hamburgerLines {
+    display: block;
+    height: 6.1vw;
+    width: 7.5vw;
+    position: absolute;
+    top: 4.7vw;
+    right: 4.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header nav #hamburgerLines .line {
+    height: 0.9vw;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  header nav #hamburgerLines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  header nav #hamburgerLines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  header nav #hamburgerLines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  header nav #menuItems {
+    background-image: linear-gradient(90deg, #565c64, #384251 5% 30%, #424a53, #384251 90% 95%, #565c64);
+    color: #afa17e;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    transform: translate(100vw);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    padding: 0;
+    padding-top: 2vw;
+    margin-top: 1.5vw;
+    text-align: center;
+    list-style-type: none;
+  }
+  header nav #menuItems li {
+    margin-bottom: 2vw;
+    font-size: 5vw;
+  }
+  header nav input[type=checkbox]:checked ~ #hamburgerLines .line1 {
+    transform: rotate(45deg);
+  }
+  header nav input[type=checkbox]:checked ~ #hamburgerLines .line2 {
+    transform: scaleY(0);
+  }
+  header nav input[type=checkbox]:checked ~ #hamburgerLines .line3 {
+    transform: rotate(-45deg);
+  }
+  header nav input[type=checkbox]:checked ~ #menuItems {
+    transform: translate(0);
+  }
+  header nav #logInDiv {
+    position: absolute;
+    right: 2vw;
+  }
+  header nav #logInDiv button {
+    font-size: 3.3vw;
     height: 6vw;
-    width: 30vw;
+    width: 29.4vw;
   }
   main {
-    height: calc(100vh - 25vw);
+    height: calc(100vh - 15vw);
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/bg-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
