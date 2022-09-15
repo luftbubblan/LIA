@@ -9,7 +9,11 @@ const names = [];
 function logIn(e) {
     const name = capitalizeFirstLetter(e.children[0].value);
     let names = localStorage.getItem("names");
-    if(names.includes(name + ",")) {
+    if((localStorage.getItem("names") === null)) {
+        document.getElementById("logInDivMessage").innerHTML = "Du är inloggad som " + name;
+        names += name + ",";
+        localStorage.setItem("names", names);
+    } else if(names.includes(name + ",")) {
         document.getElementById("logInDivMessage").innerHTML = "Välkommen tillbaka! Du är inloggad som " + name; 
     } else {
         document.getElementById("logInDivMessage").innerHTML = "Du är inloggad som " + name;
@@ -45,6 +49,3 @@ function logOut() {
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
-// ---UNCOMMENT TO RESET LOCAL STORAGE FOR SAVED NAMES---
-// localStorage.setItem("names", "");
